@@ -1,0 +1,17 @@
+# Compiled class file
+*.class
+bin/
+target/
+
+.classpath/
+.project/
+
+*.log
+
+.settings/org.sonarlint.eclipse.core.prefs
+build/
+.settings/
+*.classpath
+*.project
+/.vscode
+.idea/
