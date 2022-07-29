@@ -106,9 +106,3 @@ typedef enum {
   }
 }
 ```
-
-## 4. Deliverable
-
-You can deliver the code by sharing the repository with the interviewer in any public service (Github, BitBucket, Gitlab), or by sending the zip git repository. Align with the interviewer which best fits you.
-
-Enjoy :)
