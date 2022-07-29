@@ -16,4 +16,8 @@ public class KillOccurred{
 		return new KillOccurred(killer, killed, deathCause);
 	}
 	
+	public boolean isSuicide() {
+		return this.killed.equals(this.killer);
+	}
+	
 }

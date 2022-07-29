@@ -28,6 +28,10 @@ public class Game {
 	}
 	
 	public void add(KillOccurred killOccurred) {
+		if(killOccurred.isSuicide()) {
+			return;
+		}
+		
 		this.killsOccurred.add(killOccurred);
 		countKills(killOccurred);
 	}
@@ -47,7 +51,7 @@ public class Game {
 			int qtKills = this.mapQtKillsByUser.getOrDefault(killOccurred.getKilled(), 0);
 			qtKills--;
 			this.mapQtKillsByUser.put(killOccurred.getKilled(), qtKills);
-		}else {
+		}else if(!killOccurred.isSuicide()){
 			int qtKills = this.mapQtKillsByUser.getOrDefault(killOccurred.getKiller(), 0);
 			qtKills++;
 			this.mapQtKillsByUser.put(killOccurred.getKiller(), qtKills);

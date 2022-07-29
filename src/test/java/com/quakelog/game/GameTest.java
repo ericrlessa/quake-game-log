@@ -6,11 +6,6 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-import com.quakelog.game.DeathCause;
-import com.quakelog.game.Game;
-import com.quakelog.game.KillOccurred;
-import com.quakelog.game.User;
-
 public class GameTest {
 
 	@Test

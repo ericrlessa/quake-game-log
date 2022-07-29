@@ -6,7 +6,6 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-import com.quakelog.file.QuakeLogParser;
 import com.quakelog.game.KillOccurred;
 import com.quakelog.game.User;
 
@@ -75,6 +74,7 @@ public class QuakeLogParserTest {
 		assertEquals("killed", killOccurred.getKiller().getName());
 		assertEquals("killed", killOccurred.getKilled().getName());
 		assertEquals("MOD_FALLING", killOccurred.getDeathCause().getCause());
+		assertTrue(killOccurred.isSuicide());
 	}
 
 	@Test
@@ -92,6 +92,7 @@ public class QuakeLogParserTest {
 		assertEquals("Mocinha", killOccurred.getKilled().getName());
 		assertEquals("MOD_ROCKET_SPLASH", killOccurred.getDeathCause().getCause());
 		assertFalse(killOccurred.getKiller().isWorld());
+		assertFalse(killOccurred.isSuicide());
 	}
 
 	@Test
