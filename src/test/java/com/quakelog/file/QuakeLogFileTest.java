@@ -1,4 +1,4 @@
-package com.cloudwalk.tests.quakelog.file;
+package com.quakelog.file;
 
 import static org.junit.Assert.assertEquals;
 
@@ -7,8 +7,9 @@ import java.util.List;
 
 import org.junit.Test;
 
-import com.cloudwalk.tests.quakelog.game.Game;
-import com.cloudwalk.tests.quakelog.game.GameRepository;
+import com.quakelog.file.QuakeLogFile;
+import com.quakelog.game.Game;
+import com.quakelog.game.GameRepository;
 
 public class QuakeLogFileTest{
 

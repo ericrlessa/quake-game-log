@@ -1,11 +1,11 @@
-package com.cloudwalk.tests.quakelog.file;
+package com.quakelog.file;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import com.cloudwalk.tests.quakelog.game.DeathCause;
-import com.cloudwalk.tests.quakelog.game.KillOccurred;
-import com.cloudwalk.tests.quakelog.game.User;
+import com.quakelog.game.DeathCause;
+import com.quakelog.game.KillOccurred;
+import com.quakelog.game.User;
 
 class QuakeLogParser {
 
@@ -22,10 +22,10 @@ class QuakeLogParser {
 		if(!matcher.find()) {
 			throw new LogFormatException("Error in log format when extracting kill -> line: " + line);
 		}
-
-		User killer = User.of(matcher.group(1).trim());
-		User killed = User.of(matcher.group(2).trim());
-		DeathCause deathCause = DeathCause.of(matcher.group(3).trim());
+		
+		User killer = new User(matcher.group(1).trim());
+		User killed = new User(matcher.group(2).trim());
+		DeathCause deathCause = new DeathCause(matcher.group(3).trim());
 
 		return KillOccurred.of(killer, killed, deathCause);
 	}
@@ -44,7 +44,7 @@ class QuakeLogParser {
 		if(!matcher.find()) {
 			throw new LogFormatException("Error in log format when extracting ClientUserinfoChanged -> line: " + line);
 		}
-		return User.of(matcher.group(1));
+		return new User(matcher.group(1));
 	}
 	
 	static boolean userStarted(String line) {

@@ -1,8 +1,8 @@
-package com.cloudwalk.tests.quakelog.report;
+package com.quakelog.report;
 
 import java.util.List;
 
-import com.cloudwalk.tests.quakelog.game.Game;
+import com.quakelog.game.Game;
 
 public class GameReport {
 	

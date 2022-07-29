@@ -1,4 +1,4 @@
-package com.cloudwalk.tests.quakelog.game;
+package com.quakelog.game;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -43,14 +43,14 @@ public class Game {
 	}
 	
 	private void countKills(KillOccurred killOccurred) {
-		if(killOccurred.killer().isWorld()) {
-			int qtKills = this.mapQtKillsByUser.getOrDefault(killOccurred.killed(), 0);
+		if(killOccurred.getKiller().isWorld()) {
+			int qtKills = this.mapQtKillsByUser.getOrDefault(killOccurred.getKilled(), 0);
 			qtKills--;
-			this.mapQtKillsByUser.put(killOccurred.killed(), qtKills);
+			this.mapQtKillsByUser.put(killOccurred.getKilled(), qtKills);
 		}else {
-			int qtKills = this.mapQtKillsByUser.getOrDefault(killOccurred.killer(), 0);
+			int qtKills = this.mapQtKillsByUser.getOrDefault(killOccurred.getKiller(), 0);
 			qtKills++;
-			this.mapQtKillsByUser.put(killOccurred.killer(), qtKills);
+			this.mapQtKillsByUser.put(killOccurred.getKiller(), qtKills);
 		}	
 	}
 

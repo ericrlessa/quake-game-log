@@ -1,11 +1,11 @@
-package com.cloudwalk.tests.quakelog.report;
+package com.quakelog.report;
 
 import java.util.stream.Collectors;
 
 import org.json.JSONObject;
 
-import com.cloudwalk.tests.quakelog.game.Game;
-import com.cloudwalk.tests.quakelog.game.User;
+import com.quakelog.game.Game;
+import com.quakelog.game.User;
 
 class QuakeGameFormat {
 	

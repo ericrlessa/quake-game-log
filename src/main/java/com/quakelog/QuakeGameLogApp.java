@@ -1,14 +1,14 @@
-package com.cloudwalk.tests.quakelog;
+package com.quakelog;
 
 import java.io.FileNotFoundException;
 import java.util.List;
 
-import com.cloudwalk.tests.quakelog.file.QuakeLogFile;
-import com.cloudwalk.tests.quakelog.game.Game;
-import com.cloudwalk.tests.quakelog.game.GameRepository;
-import com.cloudwalk.tests.quakelog.report.DeathCauseReport;
-import com.cloudwalk.tests.quakelog.report.GameReport;
-import com.cloudwalk.tests.quakelog.report.PlayerRankingReport;
+import com.quakelog.file.QuakeLogFile;
+import com.quakelog.game.Game;
+import com.quakelog.game.GameRepository;
+import com.quakelog.report.DeathCauseReport;
+import com.quakelog.report.GameReport;
+import com.quakelog.report.PlayerRankingReport;
 
 public class QuakeGameLogApp 
 {

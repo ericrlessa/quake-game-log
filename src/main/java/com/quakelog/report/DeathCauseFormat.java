@@ -1,11 +1,11 @@
-package com.cloudwalk.tests.quakelog.report;
+package com.quakelog.report;
 
 import java.util.Map;
 
 import org.json.JSONObject;
 
-import com.cloudwalk.tests.quakelog.game.DeathCause;
-import com.cloudwalk.tests.quakelog.game.Game;
+import com.quakelog.game.DeathCause;
+import com.quakelog.game.Game;
 
 class DeathCauseFormat {
 	

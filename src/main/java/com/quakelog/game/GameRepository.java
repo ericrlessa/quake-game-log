@@ -1,4 +1,4 @@
-package com.cloudwalk.tests.quakelog.game;
+package com.quakelog.game;
 
 import java.util.List;
 

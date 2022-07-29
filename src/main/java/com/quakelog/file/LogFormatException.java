@@ -1,4 +1,4 @@
-package com.cloudwalk.tests.quakelog.file;
+package com.quakelog.file;
 
 public class LogFormatException extends RuntimeException{
 

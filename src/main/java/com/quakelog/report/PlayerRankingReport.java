@@ -1,4 +1,4 @@
-package com.cloudwalk.tests.quakelog.report;
+package com.quakelog.report;
 
 import static java.util.stream.Collectors.groupingBy;
 import static java.util.stream.Collectors.summingInt;
@@ -8,8 +8,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-import com.cloudwalk.tests.quakelog.game.Game;
-import com.cloudwalk.tests.quakelog.game.User;
+import com.quakelog.game.Game;
+import com.quakelog.game.User;
 
 public class PlayerRankingReport {
 

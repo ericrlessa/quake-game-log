@@ -1,23 +1,7 @@
-# Software Engineer test
 
 > Truth can only be found in one place: the code. <br/>
 > -- Robert C. Martin
 
-## 1. Introduction
-
-This test is intended for candidates applying to Software Engineering positions at CloudWalk.
-
-You are welcome to use a programming language that you are comfortable with.
-
-## 2. Requirements
-
-- Git
-- A development environment
-- Quake game [log](https://gist.github.com/cloudwalk-tests/be1b636e58abff14088c8b5309f575d8)
-
-## 3. Tasks
-
-### 3.1. Log parser
 
 Create a project to parse the Quake log file.
 

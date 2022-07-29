@@ -1,10 +1,15 @@
-package com.cloudwalk.tests.quakelog.game;
+package com.quakelog.game;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
+
+import com.quakelog.game.DeathCause;
+import com.quakelog.game.Game;
+import com.quakelog.game.KillOccurred;
+import com.quakelog.game.User;
 
 public class GameTest {
 
@@ -91,8 +96,8 @@ public class GameTest {
 		
 		//verify
 		assertEquals(2, game.players().size()); 
-		assertTrue(game.players().contains(User.of("Isgalamido"))); 
-		assertTrue(game.players().contains(User.of("Zeh"))); 
+		assertTrue(game.players().contains(new User("Isgalamido"))); 
+		assertTrue(game.players().contains(new User("Zeh"))); 
 		assertFalse(killedIsgalamido.isWorld());
 		assertFalse(killedZeh.isWorld());
 	}

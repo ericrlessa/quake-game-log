@@ -1,4 +1,4 @@
-package com.cloudwalk.tests.quakelog.file;
+package com.quakelog.file;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -6,8 +6,9 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-import com.cloudwalk.tests.quakelog.game.KillOccurred;
-import com.cloudwalk.tests.quakelog.game.User;
+import com.quakelog.file.QuakeLogParser;
+import com.quakelog.game.KillOccurred;
+import com.quakelog.game.User;
 
 public class QuakeLogParserTest {
 	
@@ -70,10 +71,10 @@ public class QuakeLogParserTest {
 		
 		//verify
 		assertTrue(QuakeLogParser.killOccured(kill));
-		assertFalse(killOccurred.killer().isWorld());
-		assertEquals("killed", killOccurred.killer().getName());
-		assertEquals("killed", killOccurred.killed().getName());
-		assertEquals("MOD_FALLING", killOccurred.deathCause().getCause());
+		assertFalse(killOccurred.getKiller().isWorld());
+		assertEquals("killed", killOccurred.getKiller().getName());
+		assertEquals("killed", killOccurred.getKilled().getName());
+		assertEquals("MOD_FALLING", killOccurred.getDeathCause().getCause());
 	}
 
 	@Test
@@ -87,10 +88,10 @@ public class QuakeLogParserTest {
 		
 		//verify
 		assertTrue(QuakeLogParser.killOccured(kill));
-		assertEquals("Isgalamido", killOccurred.killer().getName());
-		assertEquals("Mocinha", killOccurred.killed().getName());
-		assertEquals("MOD_ROCKET_SPLASH", killOccurred.deathCause().getCause());
-		assertFalse(killOccurred.killer().isWorld());
+		assertEquals("Isgalamido", killOccurred.getKiller().getName());
+		assertEquals("Mocinha", killOccurred.getKilled().getName());
+		assertEquals("MOD_ROCKET_SPLASH", killOccurred.getDeathCause().getCause());
+		assertFalse(killOccurred.getKiller().isWorld());
 	}
 
 	@Test
@@ -104,10 +105,10 @@ public class QuakeLogParserTest {
 		
 		//verify
 		assertTrue(QuakeLogParser.killOccured(kill));
-		assertEquals("Dono da Bola", killOccurred.killer().getName());
-		assertEquals("Zeh", killOccurred.killed().getName());
-		assertEquals("MOD_ROCKET", killOccurred.deathCause().getCause());
-		assertFalse(killOccurred.killer().isWorld());
+		assertEquals("Dono da Bola", killOccurred.getKiller().getName());
+		assertEquals("Zeh", killOccurred.getKilled().getName());
+		assertEquals("MOD_ROCKET", killOccurred.getDeathCause().getCause());
+		assertFalse(killOccurred.getKiller().isWorld());
 	}
 
 	@Test
@@ -121,10 +122,10 @@ public class QuakeLogParserTest {
 		
 		//verify
 		assertTrue(QuakeLogParser.killOccured(kill));
-		assertTrue(killOccurred.killer().isWorld());
-		assertEquals("<world>", killOccurred.killer().getName());
-		assertEquals("Assasinu Credi", killOccurred.killed().getName());
-		assertEquals("MOD_FALLING", killOccurred.deathCause().getCause());
+		assertTrue(killOccurred.getKiller().isWorld());
+		assertEquals("<world>", killOccurred.getKiller().getName());
+		assertEquals("Assasinu Credi", killOccurred.getKilled().getName());
+		assertEquals("MOD_FALLING", killOccurred.getDeathCause().getCause());
 		
 	}
 

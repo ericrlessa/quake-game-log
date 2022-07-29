@@ -1,13 +1,13 @@
-package com.cloudwalk.tests.quakelog.report;
+package com.quakelog.report;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-import com.cloudwalk.tests.quakelog.game.DeathCause;
-import com.cloudwalk.tests.quakelog.game.Game;
-import com.cloudwalk.tests.quakelog.game.KillOccurred;
+import com.quakelog.game.DeathCause;
+import com.quakelog.game.Game;
+import com.quakelog.game.KillOccurred;
 
 public class DeathCauseReport {
 
@@ -28,7 +28,7 @@ public class DeathCauseReport {
 	}
 
 	private static Map<DeathCause, Long> groupByDeathCauseCount(Game game) {
-		return game.killsOccured().stream().collect(Collectors.groupingBy(KillOccurred::deathCause, Collectors.counting()));
+		return game.killsOccured().stream().collect(Collectors.groupingBy(KillOccurred::getDeathCause, Collectors.counting()));
 	}
 	
 	

@@ -1,6 +1,6 @@
-package com.cloudwalk.tests.quakelog.report;
+package com.quakelog.report;
 
-import com.cloudwalk.tests.quakelog.game.User;
+import com.quakelog.game.User;
 
 class Rank implements Comparable<Rank>{
 
